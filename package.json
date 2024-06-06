@@ -1,12 +1,32 @@
 {
   "name": "ufs_api",
   "version": "1.0.0",
-  "description": "A API For interacting with IPFS",
-  "main": "index.js",
-  "scripts": {},
+  "description": "An API For interacting with IPFS",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
   "author": "quanvndzai",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/winston": "^2.4.4",
+    "jest": "^29.7.0",
+    "prisma": "^5.15.0",
+    "ts-jest": "^29.1.4",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "winston": "^3.13.0"
   }
 }
